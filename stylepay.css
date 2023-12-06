@@ -1,0 +1,91 @@
+/* stylepay.css */
+
+#but {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('hom3.jpg')center/cover no-repeat;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(53, 50, 50);
+  font-family: 'Courier New', monospace;
+  font-size: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+#paymentDetails {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+#upiQRCode {
+  width: 200px; /* Adjust the size as needed */
+  height: 200px;
+  margin: 20px;
+}
+
+form {
+  margin: 20px;
+}
+
+#totalAmount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* Adjust the color as needed */
+}
+
+#referenceNumber {
+  
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+  margin-left: 500px;
+  padding: 5px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#but {
+  margin-top: 20px;
+}
+
+#logoutButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+#totalButton {
+  font-family: cursive;
+  animation: floatText 3s ease-in-out infinite alternate;
+  background-color: red;
+}

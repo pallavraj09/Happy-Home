@@ -1,0 +1,40 @@
+<!-- user-details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details</title>
+  <link rel="stylesheet" type="text/css" href="style1.css"> <!-- Link to style1.css -->
+</head>
+<body>
+
+<button type="button" id="but" onclick="goHome()">Home</button>
+
+<h1>User Details</h1>
+
+<div id="userInfo">
+  <!-- Display user details here -->
+</div>
+
+<label for="selectedMonth">Select Month:</label>
+<select id="selectedMonth">
+  <!-- Add options for other months -->
+</select>
+
+<label for="RbillAmount">Enter Rent Bill Amount:</label>
+<input type="number" id="RbillAmount" placeholder="Enter the R-bill amount">
+
+<label for="EbillAmount">Enter Elec Bill Amount:</label>
+<input type="number" id="EbillAmount" placeholder="Enter Unit usage this month">
+
+<button type="button" id="setBillButton">Set Bill</button>
+
+<button type="button" id="logoutButton" onclick="logout()">Logout</button>
+
+<button type="button" id="back" onclick="goBack()">Back</button>
+
+<script src="user-details.js"></script>
+
+</body>
+</html>

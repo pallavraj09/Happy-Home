@@ -1,0 +1,77 @@
+<!-- payment.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" type="text/css" href="stylepay.css">
+  <script src="https://js.stripe.com/v3/"></script>
+  
+  <button type="button" id="but" onclick="goHome()">Home</button>
+</head>
+<body>
+
+  <div id="userInfo">
+
+    <!-- Display user details here -->
+  </div>
+  <script src="user-details.js"></script>
+<!-- Display Total Amount, User Name, and Month -->
+<div id="billDetails">
+
+</div>
+
+<!-- Display UPI QR Code (replace 'your_upi_qr_code_url' with the actual URL) -->
+<img src="payqr.jpg" alt="pallavraj013@ybl" id="upiQRCode">
+
+<!-- Checkbox and Reference Number Input -->
+<form id="paymentForm">
+  <!-- Add the total amount display here -->
+  <p id="totalAmount"></p>
+  
+  <input type="checkbox" id="paymentDone" />
+  <label for="paymentDone">Have you done paying?</label>
+
+  <!-- Style the reference number input -->
+  <input type="text" id="referenceNumber" placeholder="Enter last four digits of reference number">
+
+  <button type="button" onclick="storeReferenceNumber()">Submit</button>
+</form>
+
+<button type="button" id="logoutButton" onclick="logout()">Logout</button>
+
+<script>
+  function goHome() {
+    window.location.href = 'dashboard.html';
+  }
+
+  function logout() {
+    window.location.href = 'login.html';
+  }
+
+  function storeReferenceNumber() {
+    const referenceNumber = document.getElementById('referenceNumber').value;
+    const totalAmount = document.getElementById('totalAmount').innerText;
+
+    if (document.getElementById('paymentDone').checked && referenceNumber.length === 4) {
+      // Store reference number and related information in localStorage
+      const paymentDetails = {
+        userName: localStorage.getItem('selectedUser'),
+        month: localStorage.getItem('selectedMonth'),
+        referenceNumber: referenceNumber,
+        totalAmount: totalAmount
+      };
+
+      localStorage.setItem('paymentDetails', JSON.stringify(paymentDetails));
+
+      window.location.href = 'payment-success.html';
+    } else {
+      alert('Please check the payment option and enter the last four digits of the reference number.');
+    }
+  }
+</script>
+<script src="rent-bill.js"></script>
+</body>
+</html>

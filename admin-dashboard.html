@@ -1,0 +1,39 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  
+  <link rel="stylesheet" type="text/css" href="stylefordashboard.css"> <!-- Link to stylefordashboard.css -->
+  <script src="script.js"></script>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<!-- Display registered user list -->
+<div id="userList">
+  <h2>Registered Users</h2>
+  <ul id="registeredUsers"></ul>
+</div>
+<div id="dataList"></div>
+<!-- Display admin info -->
+<div id="adminInfo">
+  <h2>Admin Information</h2>
+  <p id="adminName"></p>
+  <p id="adminMobile"></p>
+</div>
+
+<button type="button" id="clearDataButton">Clear All Data</button>
+<button type="button" id="clearAdminDataButton">Clear Admin Data</button>
+<button type="button" id="clearUserDataButton">Clear User Data</button>
+<button type="button" id="logoutButton">Logout</button>
+
+<button type="button" onclick="goBack()">Back</button>
+
+<script src="admin-dashboard.js"></script>
+
+</body>
+</html>

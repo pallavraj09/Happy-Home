@@ -1,0 +1,145 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('BACK.JPG.jpg') center/cover no-repeat;
+  background-color: #1a1a1a; /* Fallback background color */
+  color: #fff; /* Text color */
+}
+
+h1 {
+  text-align: center;
+  color: #fdfdfd;
+  font-family: 'Courier New', monospace;
+  font-size: 60px; /* Increased font size */
+  margin-bottom: 20px;
+  position: relative;
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+}
+
+.action-buttons a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Button background color */
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.action-buttons a:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+.action-buttons img {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.admin-signup-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+form {
+  color: #fff;
+  max-width: 400px;
+  margin: 20px auto; /* Add margin for spacing */
+  padding: 30px; /* Increased padding */
+  border: 1px solid #555; /* Darker border color */
+  border-radius: 8px;
+  backface-visibility: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Increased box shadow */
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  width: calc(100% - 20px);
+}
+
+form button {
+  color: #fff;
+  background-color: #000; /* Button background color */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#signup-popup {
+  display: none;
+}
+
+#adminSignupButton {
+  position: absolute;
+  top: 10px; /* Adjust top position for spacing */
+  left: 10px; /* Adjust left position for spacing */
+  z-index: 999;
+  cursor: pointer;
+  background-color: #333; /* Button background color */
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#adminSignupButton:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+#adminSignupButton.hidden {
+  display: none;
+}
+
+#but {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+
+#adminSignupButtonDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  cursor: pointer;
+}

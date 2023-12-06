@@ -1,0 +1,32 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" type="text/css" href="stylefordashboard.css">
+</head>
+<body>
+
+<h1>Welcome to Happy Home!</h1>
+
+<div id="user-info">
+  <p id="user-name"></p>
+  <p id="user-mobile"></p>
+</div>
+
+<button type="button" onclick="goBack()">Back</button>
+
+<!-- Additional buttons for rent and electricity bills -->
+<button id="RentBillButton">View Rent Bill</button>
+
+
+<script src="https://js.stripe.com/v3/"></script>
+<button id="paymentButton">Make Payment</button>
+<button id="logoutButton">Logout</button>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

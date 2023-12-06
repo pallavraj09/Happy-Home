@@ -1,0 +1,118 @@
+/* style1.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background: url('hom.jpg') center/cover no-repeat;
+}
+
+
+h1 {
+  font-family: 'Courier New', monospace;
+  color: rgb(226, 234, 233);
+  font-size: 50px;
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+h2 {
+  color: rgb(129, 193, 238);
+  font-size: 30px;
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Increased button padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Added a subtle scale effect on hover */
+}
+
+#logoutButton {
+  background-color: #f44336;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#logoutButton:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Style for displaying user list */
+#userList {
+  margin: 20px auto;
+  max-width: 400px;
+  color: aliceblue;
+  padding: 15px; /* Adjusted padding for user list */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a lifted effect */
+}
+
+head {
+  background-color: #854747;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#adminInfo {
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a lifted effect */
+}
+
+#removeButton {
+  background-color: #f44336;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#removeButton:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+#userInfo {
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a lifted effect */
+}
+#but {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+#back
+{
+  background-color: #f44336;
+  position: fixed;
+  bottom: 10px;
+  right: 120px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
