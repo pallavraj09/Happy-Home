@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const enteredPassword = prompt('Enter password to clear admin data:');
 
     // Check if password is correct
-    if (enteredPassword === '0907') {
+    if (enteredPassword === '0000') {
       // Clear admin data
       localStorage.removeItem('admin');
       alert('Admin data cleared successfully!');
